@@ -1,0 +1,25 @@
+The following design patterns were used in the project outlined above:
+
+1. Factory Pattern:
+   -> `NotificationFactory` and `NotificationFactoryImpl` classes were created to abstract the creation of notification channels.
+   -> The factory pattern allows for easy extension by adding new channel types without modifying existing code.
+
+2. Singleton Pattern:
+   -> The `EmailChannel` and `SMSChannel` classes were implemented as singletons using the Singleton pattern.
+   -> Ensures that only one instance of each channel is created and used throughout the application.
+
+3. Adapter Pattern:
+   -> No direct adapter pattern is used in the provided code snippet. However, the factory pattern could be considered as a form of adapter pattern by providing a common interface to create various notification channels.
+
+4. Facade Pattern:
+   -> The `NotificationConfig` class was created to provide a simplified interface for sending notifications.
+   - >Hides the complexity of the `NotificationService` and associated classes, making it easier for clients to use.
+
+5. Strategy Pattern:
+   -> The `NotificationStrategy` and `NotificationStrategyImpl` classes were used to provide different strategies for sending notifications.
+   -> Allows for flexibility in choosing different notification channels based on the strategy.
+
+6. Observer Pattern (Pub-Sub):
+   -> The `NotificationSubscriber`, `User`, `NotificationPublisher`, and `NotificationObserver` classes were used to implement the Observer pattern.
+   ->> Subscribers (users) observe the publisher (notification publisher) for new notifications.
+
